@@ -23,13 +23,3 @@ services:
       SERVER_API_HOST: https://pohs.cleopatra.quest
       SERVER_API_PORT: 443
       SERVER_API_PATH: shop-api
-      
-  database:
-    image: postgres
-    volumes:
-      - /var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: vendure
