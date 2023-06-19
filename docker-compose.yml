@@ -9,16 +9,3 @@ services:
       - /home/node/app/node_modules
     ports:
       - "3000:3000"
-
-  storefront:
-    build:
-      context: .
-      dockerfile: Dockerfile-storefront
-      args:
-        STOREFRONT_VERSION: 0.1.27
-    ports:
-      - "4000:4000"
-    environment:
-      SERVER_API_HOST: https://pohs.cleopatra.quest
-      SERVER_API_PORT: 443
-      SERVER_API_PATH: shop-api
