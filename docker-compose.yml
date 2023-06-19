@@ -1,11 +1,13 @@
 version: '3'
 services:
-  server:
-    build:
+  vendure:
+    build: 
       context: .
       dockerfile: Dockerfile
-    volumes:
+    container_name: vendure
+    user: node
+    working_dir: /home/node/app
+    volumes: 
       - .:/home/node/app
-      - /home/node/app/node_modules
     ports:
       - "3000:3000"
